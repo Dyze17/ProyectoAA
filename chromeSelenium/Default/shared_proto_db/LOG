@@ -1,0 +1,15 @@
+2025/05/20-18:07:34.212 4730 Reusing MANIFEST C:\Users\ASUS\PycharmProjects\ProyectoAA\chromeSelenium\Default\shared_proto_db/MANIFEST-000001
+2025/05/20-18:07:34.212 4730 Recovering log #13
+2025/05/20-18:07:34.214 4730 Reusing old log C:\Users\ASUS\PycharmProjects\ProyectoAA\chromeSelenium\Default\shared_proto_db/000013.log 
+2025/05/20-18:07:34.246 4730 Level-0 table #17: started
+2025/05/20-18:07:34.250 4730 Level-0 table #17: 119436 bytes OK
+2025/05/20-18:07:34.251 4730 Delete type=0 #13
+2025/05/20-18:07:34.252 4730 Compacting 4@0 + 1@1 files
+2025/05/20-18:07:34.262 4730 Generated table #18@0: 590 keys, 20937 bytes
+2025/05/20-18:07:34.262 4730 Compacted 4@0 + 1@1 files => 20937 bytes
+2025/05/20-18:07:34.263 4730 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/05/20-18:07:34.264 4730 Delete type=2 #7
+2025/05/20-18:07:34.264 4730 Delete type=2 #9
+2025/05/20-18:07:34.264 4730 Delete type=2 #11
+2025/05/20-18:07:34.264 4730 Delete type=2 #14
+2025/05/20-18:07:34.264 4730 Delete type=2 #17

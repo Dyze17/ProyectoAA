@@ -1,0 +1,6 @@
+2025/05/11-12:18:32.737 1378 Creating DB C:\Users\ASUS\chromeSelenium\Default\IndexedDB\https_journals-sagepub-com.crai.referencistas.com_0.indexeddb.leveldb since it was missing.
+2025/05/11-12:18:32.742 1378 Reusing MANIFEST C:\Users\ASUS\chromeSelenium\Default\IndexedDB\https_journals-sagepub-com.crai.referencistas.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/05/11-12:22:05.214 5338 Level-0 table #5: started
+2025/05/11-12:22:05.216 5338 Level-0 table #5: 4377 bytes OK
+2025/05/11-12:22:05.219 5338 Delete type=0 #3
+2025/05/11-12:22:05.219 5338 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

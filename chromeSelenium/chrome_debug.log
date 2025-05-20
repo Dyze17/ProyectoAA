@@ -1,0 +1,3 @@
+[14772:2576:0520/180734.031:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[2800:11212:0520/180734.168:ERROR:ui\gl\direct_composition_support.cc:615] AMD VideoProcessorGetOutputExtension failed: Error no especificado (0x80004005)
+[14772:2576:0520/180735.874:INFO:CONSOLE:0] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://login.intelproxy.com/v2/inicio?cuenta=7Ah6RNpGWF22jjyq&url=ezp.2aHR0cHM6Ly9yZXNlYXJjaC5lYnNjby5jb20vYy9yZmJqeTIvc2VhcmNoP2RlZmF1bHRkYj1hc24- (0)
