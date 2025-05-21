@@ -109,9 +109,6 @@ class WordCloudGenerator:
         if 'Category' in self.df.columns:
             # Crear un mapa de término a color
             if self.category_colors:  # Si se pasaron colores predefinidos
-                # Asegurarse que self.df tenga la categoría para cada término en `terms`
-                # Esto podría ser un poco ineficiente si se hace por cada término en un bucle grande.
-                # Es mejor construir un mapa de Label -> Category primero.
                 label_to_category_map = self.df.drop_duplicates(subset=['Label']).set_index('Label')[
                     'Category'].to_dict()
                 for term_label in terms.keys():
@@ -139,29 +136,6 @@ class WordCloudGenerator:
                     for term_label in terms.keys():
                         final_term_colors[term_label] = '#999999'  # Todo gris
 
-            # Función para asignar color a cada palabra en la nube
-            # La API de WordCloud puede usar color_func o colormap.
-            # Si queremos colores específicos por palabra basados en categoría, color_func es más directo.
-            # La lógica original usaba colormap, pero la intención parece ser colorear por categoría.
-            # Si tu intención era usar un colormap general y no colores por categoría,
-            # puedes quitar la lógica de final_term_colors y solo pasar colormap.
-            # Vamos a intentar usar color_func si tenemos final_term_colors.
-
-            # Modificación: La librería wordcloud no toma un diccionario de colores directamente.
-            # Usa una función `color_func`.
-            # O, si queremos mantener `colormap="viridis"` como en tu original, entonces
-            # la lógica de `category_colors` y `term_colors` no se usaría para colorear la nube,
-            # sino quizás para una leyenda externa si la necesitaras.
-            # Tu código original tiene: `colormap="viridis"`.generate_from_frequencies(terms)
-            # Y luego intenta usar term_colors, lo cual no es como funciona la API directamente.
-
-            # Opción 1: Mantener colormap="viridis" (tu código original)
-            # En este caso, la lógica de category_colors no se usaría para el coloreado de la nube.
-            # wordcloud_instance = WordCloud(width=1200, height=600, background_color="white",
-            #                               colormap="viridis").generate_from_frequencies(terms)
-
-            # Opción 2: Colorear por categoría usando color_func
-            # Esto requiere una función que WordCloud llamará para cada palabra.
             def category_color_func(word, **kwargs):
                 return final_term_colors.get(word, "#999999")  # Devuelve el color para la palabra
 
@@ -206,9 +180,6 @@ def run_wordcloud_generator(status_callback, project_root_dir):
     os.makedirs(output_visual_dir, exist_ok=True)
     output_image = os.path.join(output_visual_dir, "WordCloud_Terms.png")  # Nombre de archivo de salida
 
-    # En este punto, no estamos pasando `category_colors` predefinidos,
-    # así que el generador usará su propia lógica para crearlos si es necesario,
-    # o usará el colormap por defecto si la columna Category no está o está vacía.
     generator = WordCloudGenerator(nodes_csv_path=nodes_file_input, status_callback=status_callback)
 
     if generator.load_data():
